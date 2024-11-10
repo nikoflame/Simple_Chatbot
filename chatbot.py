@@ -10,6 +10,8 @@ def get_response(user_input, user_name):
         return f"I'm sorry to hear that, {user_name}! Your motivational quote is: If you think you are too small to make a difference, try sleeping with a mosquito. -Ghandi.  How else are you feeling?"
     elif "angry" in user_input:
         return f"I'm sorry to hear that, {user_name}!  Your motivational quote is: Anger makes dull men witty, but it keeps them poor. -Elizabeth I.  How else are you feeling?"
+    elif "happy" in user_input:
+        return f"That's awesome, {user_name}!  Your motivational quote is: Happiness cannot be traveled to, owned, earned, worn or consumed. Happiness is the spiritual experience of living every minute with love, grace, and gratitude. -Denis Waitley.  How else are you feeling?"
     elif "anxious" in user_input:
         return f"I'm sorry to hear that, {user_name}!  Your motivational quote is: As long as you are breathing, there is more right with you than wrong with you, no matter what is wrong. -Jon Kabat-Zinn.  How else are you feeling?"
     elif "unhappy" in user_input:
@@ -50,7 +52,7 @@ def main():
     
     while True:
         user_input = input("You: ")
-        if user_input.lower() in ["bye", "goodbye"]:
+        if user_input.lower() in ["bye", "goodbye", "quit", "exit"]:
             print(f"Chatbot: Goodbye, {user_name}! Have a great day!")
             break
         response = get_response(user_input, user_name)
